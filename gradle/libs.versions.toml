@@ -14,7 +14,9 @@ mockitoKotlin = "2.2.0"
 mockk = "1.12.0"
 retrofit2 = "2.9.0"
 hilt = "2.51.1"
+hiltNavigationCompose = "1.0.0"
 okhttp = "4.10.0"
+kotlinParcelize = "1.5.21"
 junitKtx = "1.1.5"
 turbine = "0.8.0"
 
@@ -24,13 +26,17 @@ kotlinxCoroutinesTest = "1.6.4"
 mockito = "4.6.1"
 espresso = "3.5.1"
 assertjCore = "3.23.1"
+coreTesting = "2.1.0"
+benchmarkCommon = "1.2.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertjCore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 kotlinx-coroutines-test-v164 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
+kotlinx-coreTesting = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+mockito_inline = { group = "org.mockito", name = "mockito-inline", version.ref = "mockito" }
 espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
 coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -56,8 +62,10 @@ squareup-okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "
 
 dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 turbine = { group = "app.cash.turbine",name = "turbine", version.ref = "turbine" }
+androidx-benchmark-common = { group = "androidx.benchmark", name = "benchmark-common", version.ref = "benchmarkCommon" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

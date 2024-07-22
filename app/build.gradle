@@ -3,7 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
 
     id 'kotlin-kapt'
-    id("com.google.dagger.hilt.android")
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -66,9 +67,11 @@ dependencies {
     implementation libs.squareup.okhttp
     implementation libs.squareup.okhttp.logging.interceptor
 
-    //dagger
+    //hilt
     implementation libs.dagger.hilt
     implementation libs.androidx.junit.ktx
+    implementation libs.hilt.navigation.compose
+    implementation libs.androidx.benchmark.common
     kapt libs.dagger.hilt.compiler
 
 
@@ -79,9 +82,11 @@ dependencies {
     testImplementation(libs.mockk)
     testImplementation libs.junit
     testImplementation libs.mockito
+    testImplementation libs.mockito.inline
     testImplementation libs.kotlinx.coroutines.test.v164
     testImplementation libs.assertj.core
     testImplementation libs.turbine
+    testImplementation libs.kotlinx.coreTesting
 
     androidTestImplementation libs.espresso
     androidTestImplementation libs.androidx.junit
